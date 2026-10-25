@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宋宇轩的个人档案｜初二（5）班</title>
+<meta name="description" content="宋宇轩的个人档案：初二（5）班，就读于程委中学，寄宿制一周回一次家，爱好台球、跑步、画画、历史、天文，擅长数学。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --felt-1:#143326;
+  --felt-2:#0F271C;
+  --ink:#0B1A13;
+  --ink-soft:rgba(11,26,19,.35);
+  --brass:#E0B265;
+  --brass-dim:rgba(224,178,101,.42);
+  --paper:#F2EDE3;
+  --muted:#B9C2B9;
+  --line:rgba(224,178,101,.18);
+  --shadow-lift:0 40px 80px -32px rgba(0,0,0,.65);
+  --display:'Playfair Display','Noto Serif SC',serif;
+  --serif:'Noto Serif SC','Playfair Display',serif;
+  --sans:'Noto Sans SC',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--felt-1);
+  color:var(--paper);
+  line-height:1.75;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--brass);color:#0D1210}
+
+/* ============ 台呢纹理 ============ */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(1100px 620px at 22% 12%,rgba(224,178,101,.10),transparent 62%),
+    radial-gradient(900px 560px at 82% 78%,rgba(255,255,255,.045),transparent 60%),
+    repeating-linear-gradient(103deg,rgba(255,255,255,.018) 0 2px,transparent 2px 5px);
+  pointer-events:none;
+  z-index:0;
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:radial-gradient(ellipse at 50% 40%,transparent 42%,rgba(6,16,11,.62) 100%);
+  pointer-events:none;
+  z-index:0;
+}
+
+.wrap{width:min(1180px,92vw);margin-inline:auto;position:relative;z-index:1}
+section{scroll-margin-top:96px}
+
+/* ============ 导航 ============ */
+header.nav{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  transition:background .5s ease,backdrop-filter .5s ease,box-shadow .5s ease;
+}
+header.nav.scrolled{
+  background:rgba(12,28,20,.82);
+  backdrop-filter:blur(18px);
+  box-shadow:0 1px 0 var(--line),0 24px 50px -34px rgba(0,0,0,.7);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.35rem 0;gap:1.5rem;
+}
+.brand{display:flex;align-items:center;gap:.95rem;text-decoration:none}
+.brand .ball{
+  width:42px;height:42px;border-radius:50%;flex:none;
+  background:
+    radial-gradient(circle at 33% 29%,#FBF7EE 0 31%,transparent 32%),
+    radial-gradient(circle at 32% 28%,#FFFFFF 0 5%,transparent 6%),
+    radial-gradient(circle at 60% 68%,#B98945,#8C642F);
+  box-shadow:0 12px 24px -10px rgba(224,178,101,.55),inset 0 -4px 10px rgba(0,0,0,.35);
+}
+.brand .name{font-family:var(--serif);font-weight:900;font-size:1.16rem;letter-spacing:.11em;color:var(--paper)}
+.brand .num{font-family:var(--mono);font-size:.58rem;letter-spacing:.32em;color:var(--brass);text-transform:uppercase}
+
+nav ul{display:flex;gap:2.15rem;list-style:none}
+nav a{
+  color:rgba(242,237,227,.72);text-decoration:none;font-size:.82rem;letter-spacing:.06em;
+  position:relative;padding-bottom:.32rem;transition:color .35s ease;
+}
+nav a::after{
+  content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:var(--brass);transform:scaleX(0);transform-origin:right;
+  transition:transform .45s cubic-bezier(.2,.8,.2,1);
+}
+nav a:hover{color:var(--paper)}
+nav a:hover::after{transform:scaleX(1);transform-origin:left}
+
+.nav-cta{
+  border:1px solid var(--brass-dim);color:var(--brass);padding:.62rem 1.35rem;
+  border-radius:100px;font-size:.82rem;letter-spacing:.09em;
+  transition:background .35s ease,color .35s ease,border-color .35s ease,transform .35s ease;
+}
+.nav-cta:hover{background:var(--brass);color:#0D1210;border-color:var(--brass);transform:translateY(-1px)}
+.nav-cta::after{display:none}
+
+/* ============ Hero ============ */
+.hero{
+  min-height:100vh;min-height:100svh;
+  display:flex;align-items:center;
+  padding:10.5rem 0 5.5rem;
+  position:relative;
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2.5rem,5vw,5.5rem);align-items:center}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.85rem;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--brass);margin-bottom:1.75rem;
+}
+.eyebrow::before{content:"";width:42px;height:1px;background:var(--brass-dim)}
+.eyebrow i{color:var(--paper);font-style:italic;opacity:.75}
+
+h1{
+  font-family:var(--display);
+  font-size:clamp(3.15rem,8.2vw,6.75rem);
+  font-weight:900;line-height:.94;letter-spacing:-.015em;
+  margin-bottom:.28rem;
+}
+h1 .cn{
+  display:block;font-family:var(--serif);
+  font-size:clamp(1.95rem,4.4vw,3.35rem);
+  letter-spacing:.32em;font-weight:900;line-height:1.2;margin-bottom:.72rem;
+}
+h1 em{
+  font-style:italic;background:linear-gradient(102deg,#F1D098,#E0B265 42%,#B8894A);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-line{
+  font-family:var(--display);font-style:italic;font-size:clamp(1.35rem,3vw,2.35rem);
+  color:rgba(242,237,227,.92);font-weight:700;line-height:1.35;margin-bottom:1.1rem;
+}
+.hero-sub{
+  font-family:var(--serif);font-size:.86rem;letter-spacing:.24em;
+  color:var(--brass);margin-bottom:1.75rem;
+}
+.hero-desc{color:var(--muted);font-size:1.015rem;font-weight:300;max-width:46ch;margin-bottom:2.65rem}
+
+.hero-actions{display:flex;flex-wrap:wrap;gap:.95rem;align-items:center}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.62rem;
+  padding:.95rem 1.85rem;border-radius:100px;text-decoration:none;
+  font-size:.885rem;letter-spacing:.075em;border:1px solid transparent;
+  transition:transform .4s cubic-bezier(.2,.8,.2,1),background .38s ease,color .38s ease,border-color .38s ease;
+  cursor:pointer;
+}
+.btn i{font-style:normal;transition:transform .38s ease}
+.btn:hover i{transform:translateX(5px)}
+.btn-primary{
+  background:linear-gradient(128deg,#E0B265,#C99854);color:#0D1210;font-weight:500;
+  box-shadow:0 22px 42px -18px rgba(224,178,101,.72);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 30px 54px -18px rgba(224,178,101,.8)}
+.btn-ghost{border-color:var(--brass-dim);color:var(--brass)}
+.btn-ghost:hover{background:var(--brass-dim);transform:translateY(-3px)}
+.copy-btn{
+  background:transparent;border:1px solid var(--brass-dim);color:var(--brass);
+  padding:.95rem 1.65rem;border-radius:100px;font-family:var(--sans);font-size:.885rem;
+  letter-spacing:.075em;cursor:pointer;display:inline-flex;align-items:center;gap:.58rem;
+  transition:background .35s ease,color .35s ease,border-color .35s ease,transform .35s ease;
+}
+.copy-btn:hover{background:var(--brass);color:#0D1210;border-color:var(--brass);transform:translateY(-3px)}
+.copy-btn .dot{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.72;flex:none}
+
+/* ============ 档案卡 ============ */
+.file-card{
+  position:relative;border-radius:26px;overflow:hidden;
+  background:linear-gradient(163deg,rgba(28,61,44,.92),rgba(11,27,19,.96));
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-lift);
+}
+.file-card .top{
+  padding:1.25rem 1.85rem;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--line);
+}
+.file-card .top .label{
+  font-family:var(--mono);font-size:.635rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass);
+}
+.lamp{width:11px;height:11px;border-radius:50%;background:#7CC79A;box-shadow:0 0 0 5px rgba(124,199,154,.16)}
+
+.portrait{
+  margin:1.95rem auto 1.55rem;width:min(238px,62%);aspect-ratio:1/1;
+  border-radius:22px;overflow:hidden;position:relative;
+  border:1px solid var(--brass-dim);
+  background:radial-gradient(circle at 32% 26%,#2A4437,#12271D);
+  box-shadow:0 32px 62px -28px rgba(0,0,0,.85);
+}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait .initial{
+  position:absolute;inset:0;display:grid;place-items:center;
+  font-family:var(--display);font-style:italic;font-size:5.25rem;font-weight:700;
+  color:rgba(224,178,101,.34);
+}
+.portrait::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 118%,rgba(13,25,18,.72),transparent 55%);
+}
+
+.id-row{
+  display:flex;align-items:baseline;justify-content:center;gap:.85rem;
+  padding:0 1.55rem 1.35rem;
+}
+.id-row .fname{font-family:var(--serif);font-size:1.62rem;font-weight:900;letter-spacing:.13em}
+.id-row .fnum{font-family:var(--mono);font-size:.765rem;letter-spacing:.22em;color:var(--brass);opacity:.9}
+
+.data{padding:0 1.55rem 2.05rem;display:grid;gap:.62rem}
+.data .row{
+  display:flex;align-items:center;gap:.95rem;
+  padding:.72rem .92rem;border-radius:11px;
+  border:1px solid rgba(224,178,101,.105);
+  background:rgba(224,178,101,.048);
+}
+.data .row .k{
+  font-family:var(--mono);font-size:.595rem;letter-spacing:.235em;text-transform:uppercase;
+  color:var(--brass);opacity:.82;width:74px;flex:none;
+}
+.data .row .v{font-size:.875rem;color:rgba(242,237,227,.9)}
+.data .row .v .tick{
+  display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:#7CC79A;margin-right:.55rem;vertical-align:middle;
+}
+
+.cards-strip{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--line);
+}
+.cards-strip div{padding:1.35rem 1.55rem;text-align:center}
+.cards-strip div:first-child{border-right:1px solid var(--line)}
+.cards-strip .k{
+  font-family:var(--mono);font-size:.555rem;letter-spacing:.305em;text-transform:uppercase;
+  color:var(--muted);opacity:.62;margin-bottom:.32rem;
+}
+.cards-strip .v{font-family:var(--serif);font-size:.965rem;font-weight:700;letter-spacing:.09em}
+.cards-strip .v.gold{color:var(--brass)}
+
+.checker{height:18px;background:repeating-conic-gradient(#0D1210 0 25%,#F2EDE3 0 50%) 0 0/18px 18px}
+
+.scroll-hint{
+  position:absolute;left:50%;bottom:2.15rem;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.55rem;
+  font-family:var(--mono);font-size:.575rem;letter-spacing:.34em;text-transform:uppercase;
+  color:rgba(242,237,227,.34);z-index:2;
+}
+.scroll-hint .bar{
+  width:1px;height:48px;background:linear-gradient(to bottom,transparent,var(--brass));
+  animation:drop 2.6s ease-in-out infinite;
+}
+@keyframes drop{0%,100%{opacity:.25;transform:scaleY(.55);transform-origin:top}50%{opacity:1;transform:scaleY(1);transform-origin:top}}
+
+/* ============ 章节骨架 ============ */
+section{padding:clamp(5.5rem,10vw,8.5rem) 0;position:relative}
+.sec-head{margin-bottom:clamp(2.85rem,5vw,4.25rem)}
+.sec-head .label{
+  display:inline-flex;align-items:center;gap:.85rem;
+  font-family:var(--mono);font-size:.655rem;letter-spacing:.36em;text-transform:uppercase;
+  color:var(--brass);margin-bottom:1.15rem;
+}
+.sec-head .label::before{content:"";width:38px;height:1px;background:var(--brass-dim)}
+.sec-head h2{
+  font-family:var(--display);font-size:clamp(2.35rem,5.6vw,4.25rem);
+  font-weight:900;line-height:1.04;letter-spacing:-.012em;
+}
+.sec-head h2 em{font-style:italic;color:var(--brass)}
+.sec-head h2 .cn{font-family:var(--serif);letter-spacing:.19em;font-size:.62em;display:block;margin-top:.42rem;opacity:.9}
+.sec-head p{margin-top:1.25rem;color:var(--muted);max-width:56ch;font-weight:300;font-size:1.015rem}
+.sec-head.center{text-align:center}
+.sec-head.center .label{justify-content:center}
+.sec-head.center .label::before{display:none}
+.sec-head.center p{margin-inline:auto}
+
+/* ============ 时间线 ============ */
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:.85rem}
+.tl-item{
+  padding:2.25rem 1.35rem 1.95rem;border-radius:17px;position:relative;
+  border:1px solid var(--line);background:rgba(224,178,101,.038);
+  transition:transform .55s cubic-bezier(.2,.8,.2,1),background .55s ease,border-color .55s ease;
+}
+.tl-item:hover{transform:translateY(-9px);background:rgba(224,178,101,.082);border-color:var(--brass-dim)}
+.tl-item .n{
+  font-family:var(--display);font-style:italic;font-size:2.85rem;font-weight:700;
+  color:transparent;-webkit-text-stroke:1px var(--brass-dim);line-height:1;display:block;
+  margin-bottom:1.15rem;
+}
+.tl-item h4{font-family:var(--serif);font-size:1.155rem;font-weight:700;letter-spacing:.12em;margin-bottom:.42rem}
+.tl-item .yr{
+  font-family:var(--mono);font-size:.655rem;letter-spacing:.23em;color:var(--brass);
+  margin-bottom:.62rem;display:block;
+}
+.tl-item p{font-size:.835rem;color:var(--muted);font-weight:300;line-height:1.85}
+.tl-item::after{
+  content:"";position:absolute;left:1.35rem;right:1.35rem;top:.82rem;height:1px;
+  background:linear-gradient(90deg,var(--brass-dim),transparent);
+}
+
+/* ============ 能力 ============ */
+.skill-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.25rem,5vw,4.85rem);align-items:center}
+.cue-wrap{position:relative;display:grid;place-items:center;min-height:280px}
+.cue-wrap .rings{position:absolute;width:min(420px,88%);aspect-ratio:1/1;border:1px solid var(--line);border-radius:50%}
+.cue-wrap .rings::before,.cue-wrap .rings::after{
+  content:"";position:absolute;inset:12%;border:1px solid var(--line);border-radius:50%;
+}
+.cue-wrap .rings::after{inset:24%}
+.cue-wrap img{
+  width:min(440px,94%);position:relative;z-index:1;
+  transform:rotate(-9deg);filter:drop-shadow(0 44px 48px rgba(0,0,0,.62));
+}
+.cue-tag{
+  position:absolute;bottom:6%;right:2%;z-index:2;
+  font-family:var(--mono);font-size:.595rem;letter-spacing:.29em;text-transform:uppercase;
+  color:var(--brass);border:1px solid var(--brass-dim);padding:.48rem .92rem;border-radius:100px;
+  background:rgba(12,28,20,.85);backdrop-filter:blur(9px);
+}
+
+.skills{display:grid;gap:1.75rem}
+.skill .row-title{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:.72rem;gap:1rem;
+}
+.skill .row-title .cn{font-family:var(--serif);font-size:1.055rem;font-weight:700;letter-spacing:.14em}
+.skill .row-title .en{
+  font-family:var(--mono);font-size:.595rem;letter-spacing:.29em;text-transform:uppercase;color:var(--brass);opacity:.75;
+}
+.skill .row-title .pct{font-family:var(--mono);font-size:.725rem;color:var(--brass)}
+.track{
+  height:4px;border-radius:100px;background:rgba(224,178,101,.135);overflow:hidden;position:relative;
+}
+.track i{
+  display:block;height:100%;width:0;border-radius:100px;
+  background:linear-gradient(90deg,#B8894A,var(--brass));
+  transition:width 1.5s cubic-bezier(.16,1,.3,1);
+  box-shadow:0 0 14px rgba(224,178,101,.5);
+}
+.skill p{margin-top:.62rem;font-size:.825rem;color:var(--muted);font-weight:300}
+
+/* ============ 数字 ============ */
+.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem}
+.num-box{
+  text-align:center;padding:2.85rem 1.25rem 2.55rem;border-radius:19px;
+  border:1px solid var(--line);background:rgba(224,178,101,.038);
+  transition:transform .55s cubic-bezier(.2,.8,.2,1),background .55s ease,border-color .55s ease;
+}
+.num-box:hover{transform:translateY(-8px);background:rgba(224,178,101,.082);border-color:var(--brass-dim)}
+.num-box .big{
+  font-family:var(--display);font-style:italic;font-size:clamp(3.55rem,7.2vw,5.15rem);
+  font-weight:700;line-height:1;
+  background:linear-gradient(122deg,#F1D098,#E0B265 48%,#B8894A);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.num-box .lbl{
+  font-family:var(--mono);font-size:.655rem;letter-spacing:.315em;text-transform:uppercase;
+  color:var(--brass);opacity:.78;margin-top:.98rem;
+}
+.num-box .cn{font-family:var(--serif);font-size:.925rem;letter-spacing:.18em;margin-top:.32rem;opacity:.72}
+
+/* ============ 数据面板 ============ */
+.table-panel{
+  border-radius:20px;overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(158deg,rgba(28,61,44,.55),rgba(11,27,19,.86));
+}
+.panel-head{
+  display:flex;align-items:center;justify-content:space-between;gap:1.25rem;flex-wrap:wrap;
+  padding:1.45rem 1.95rem;border-bottom:1px solid var(--line);
+}
+.panel-head .t{
+  font-family:var(--mono);font-size:.625rem;letter-spacing:.315em;text-transform:uppercase;color:var(--brass);
+}
+.panel-head .note{font-family:var(--mono);font-size:.625rem;letter-spacing:.19em;color:var(--muted);opacity:.62}
+.panel-head .dots{display:flex;gap:.42rem}
+.panel-head .dots i{width:7px;height:7px;border-radius:50%;background:var(--brass-dim);opacity:.55}
+
+table{width:100%;border-collapse:collapse}
+thead th{
+  padding:1.08rem 1.25rem;text-align:left;
+  font-family:var(--mono);font-size:.555rem;letter-spacing:.305em;text-transform:uppercase;
+  color:var(--muted);opacity:.58;font-weight:400;
+  border-bottom:1px solid var(--line);white-space:nowrap;
+}
+tbody td{padding:.86rem 1.25rem;font-size:.895rem;border-bottom:1px solid rgba(224,178,101,.082)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr{transition:background .32s ease}
+tbody tr:hover{background:rgba(224,178,101,.055)}
+td:first-child{font-family:var(--serif);font-weight:700;letter-spacing:.14em;white-space:nowrap}
+td .sub{display:block;font-family:var(--mono);font-size:.555rem;letter-spacing:.255em;text-transform:uppercase;color:var(--muted);opacity:.52;margin-top:.11rem}
+td.val{font-family:var(--mono);font-size:.855rem;color:var(--paper)}
+td.subject{font-family:var(--serif);letter-spacing:.11em}
+td .rank{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:25px;height:25px;padding:0 .55rem;border-radius:100px;margin-right:.62rem;
+  font-family:var(--mono);font-size:.665rem;letter-spacing:.055em;
+}
+.rank.gold{background:var(--brass);color:#0D1210;font-weight:500}
+td .bars{display:flex;gap:3px}
+td .bars i{
+  width:7px;height:19px;border-radius:2.5px;background:rgba(224,178,101,.155);
+}
+td .bars i.on{background:var(--brass)}
+td .pill{
+  display:inline-block;padding:.24rem .82rem;border-radius:100px;
+  border:1px solid var(--brass-dim);color:var(--brass);
+  font-family:var(--mono);font-size:.555rem;letter-spacing:.29em;text-transform:uppercase;
+}
+td .pill.now{background:var(--brass);color:#0D1210;border-color:var(--brass);font-weight:500}
+
+/* ============ 微信联系 ============ */
+.wechat{
+  display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2.25rem,5vw,4.55rem);align-items:center;
+}
+.id-card{
+  background:linear-gradient(163deg,rgba(28,61,44,.62),rgba(11,27,19,.9));
+  border:1px solid var(--line);border-radius:24px;padding:2.45rem 2.05rem 1.85rem;
+  box-shadow:var(--shadow-lift);text-align:center;
+}
+.id-card .avatar{
+  width:min(168px,54%);aspect-ratio:1/1;margin:0 auto 1.55rem;border-radius:50%;overflow:hidden;
+  border:2px solid var(--brass-dim);background:radial-gradient(circle at 32% 26%,#2A4437,#12271D);
+}
+.id-card .avatar img{width:100%;height:100%;object-fit:cover}
+.id-card .avatar .initial{
+  width:100%;height:100%;display:grid;place-items:center;
+  font-family:var(--display);font-style:italic;font-size:3.35rem;font-weight:700;color:rgba(224,178,101,.34);
+}
+.id-name{font-family:var(--serif);font-size:1.235rem;font-weight:700;letter-spacing:.225em}
+.id-wx{
+  font-family:var(--mono);font-size:.725rem;letter-spacing:.225em;
+  color:var(--brass);margin:.42rem 0 1.55rem;word-break:break-all;
+}
+.id-card .copy-btn{width:100%;justify-content:center}
+.id-tip{margin-top:.88rem;font-size:.795rem;color:var(--muted);opacity:.62}
+
+.wechat-text h3{
+  font-family:var(--serif);font-size:clamp(1.85rem,3.6vw,2.55rem);
+  font-weight:900;letter-spacing:.11em;line-height:1.32;margin-bottom:1.25rem;
+}
+.wechat-text h3 em{font-style:italic;color:var(--brass);letter-spacing:.02em}
+.wechat-text p{color:var(--muted);font-weight:300;margin-bottom:1.35rem;font-size:1.015rem}
+.wechat-list{list-style:none;display:grid;gap:.72rem;margin-bottom:2.15rem}
+.wechat-list li{
+  display:flex;align-items:flex-start;gap:.85rem;font-size:.925rem;color:rgba(242,237,227,.88);
+  padding:.72rem 1.05rem;border-radius:11px;
+  border:1px solid rgba(224,178,101,.105);background:rgba(224,178,101,.042);
+}
+.wechat-list li::before{
+  content:"";width:7px;height:7px;border-radius:50%;background:var(--brass);
+  margin-top:.62rem;flex:none;
+}
+
+/* ============ 结语 ============ */
+.contact{text-align:center;padding:clamp(6.5rem,11vw,9.5rem) 0 3.25rem}
+.contact .big{
+  font-family:var(--display);font-size:clamp(2.55rem,6.6vw,5.35rem);
+  font-weight:900;line-height:1.12;letter-spacing:-.012em;margin-bottom:.92rem;
+}
+.contact .big em{
+  font-style:italic;background:linear-gradient(112deg,#F1D098,#E0B265 45%,#B8894A);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.contact .sub{
+  font-family:var(--serif);font-size:.925rem;letter-spacing:.29em;color:var(--brass);
+  opacity:.82;margin-bottom:2.65rem;
+}
+.contact-actions{display:flex;flex-wrap:wrap;gap:.92rem;justify-content:center}
+
+footer{padding:2.85rem 0 3.85rem;border-top:1px solid var(--line)}
+.footer-inner{
+  display:flex;justify-content:space-between;align-items:center;gap:1.25rem;flex-wrap:wrap;
+}
+.footer-inner p{
+  font-family:var(--mono);font-size:.595rem;letter-spacing:.265em;text-transform:uppercase;
+  color:var(--muted);opacity:.52;line-height:2.1;
+}
+.footer-inner .brand-mini{
+  display:flex;align-items:center;gap:.72rem;
+  font-family:var(--mono);font-size:.595rem;letter-spacing:.29em;color:var(--brass);opacity:.72;
+}
+.footer-inner .brand-mini .ball{
+  width:23px;height:23px;border-radius:50%;
+  background:
+    radial-gradient(circle at 33% 29%,#FBF7EE 0 31%,transparent 32%),
+    radial-gradient(circle at 60% 68%,#B98945,#8C642F);
+}
+
+/* ============ 微信弹窗 ============ */
+.modal-overlay{
+  position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:1.35rem;
+  background:rgba(8,12,10,.8);backdrop-filter:blur(10px);
+  opacity:0;visibility:hidden;transition:opacity .42s ease,visibility .42s;
+}
+.modal-overlay.open{opacity:1;visibility:visible}
+.modal{
+  width:min(430px,100%);border-radius:22px;overflow:hidden;position:relative;
+  background:linear-gradient(158deg,#1B3D2C,#0C1F17);
+  border:1px solid var(--brass-dim);
+  box-shadow:0 60px 120px -50px rgba(0,0,0,.95);
+  transform:translateY(22px) scale(.96);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1);
+}
+.modal-overlay.open .modal{transform:none}
+.modal-head{
+  padding:1.35rem 1.65rem 1.15rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  border-bottom:1px solid var(--line);
+}
+.modal-head .t{
+  font-family:var(--mono);font-size:.625rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass);
+}
+.modal-close{
+  width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:transparent;
+  color:#F2EDE3;font-size:1.05rem;line-height:1;cursor:pointer;transition:.32s;flex:none;
+}
+.modal-close:hover{background:var(--brass);color:#0D1210;border-color:var(--brass);transform:rotate(90deg)}
+.modal-body{padding:1.85rem 1.65rem 1.55rem;text-align:center}
+.modal-avatar{
+  width:92px;height:92px;border-radius:50%;margin:0 auto 1.05rem;overflow:hidden;
+  border:2px solid var(--brass);background:radial-gradient(circle at 34% 28%,#2A4437,#12271D);
+}
+.modal-avatar img{width:100%;height:100%;object-fit:cover}
+.modal-avatar .initial{
+  width:100%;height:100%;display:grid;place-items:center;
+  font-family:var(--display);font-style:italic;font-size:2.35rem;font-weight:700;color:rgba(224,178,101,.34);
+}
+.modal-body h3{font-family:var(--serif);font-size:1.72rem;font-weight:900;letter-spacing:.14em}
+.modal-body .sub{
+  font-family:var(--mono);font-size:.625rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--brass);margin-top:.35rem;
+}
+.wx-id-inline{
+  padding:1.15rem 1.15rem;border-radius:12px;border:1px dashed var(--brass-dim);
+  background:rgba(13,18,16,.42);margin:1.55rem 0 1.05rem;
+}
+.wx-id-inline .lab{
+  font-family:var(--mono);font-size:.555rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--muted);opacity:.62;
+}
+.wx-id-inline .val{font-family:var(--mono);font-size:1.02rem;letter-spacing:.1em;margin-top:.32rem;word-break:break-all}
+.modal .copy-btn{width:100%;justify-content:center;display:block;padding:.95rem 1.35rem}
+.modal-tip{font-size:.845rem;color:var(--muted);margin-top:1.05rem}
+.checker-sm{height:14px;background:repeating-conic-gradient(#0D1210 0 25%,#F2EDE3 0 50%) 0 0/16px 16px;opacity:.88}
+
+/* ============ 动效 ============ */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 1.05s cubic-bezier(.16,1,.3,1),transform 1.05s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{
+  opacity:0;transform:translateY(32px);
+  transition:opacity .95s cubic-bezier(.16,1,.3,1),transform .95s cubic-bezier(.16,1,.3,1);
+}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(1){transition-delay:.05s}
+.stagger.in>*:nth-child(2){transition-delay:.13s}
+.stagger.in>*:nth-child(3){transition-delay:.21s}
+.stagger.in>*:nth-child(4){transition-delay:.29s}
+.stagger.in>*:nth-child(5){transition-delay:.37s}
+.float{animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+
+/* ============ 响应式 ============ */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:3.25rem}
+  .file-card{max-width:520px;margin-inline:auto}
+  .skill-grid{grid-template-columns:1fr;gap:2.85rem}
+  .cue-wrap{min-height:230px}
+  .wechat{grid-template-columns:1fr;gap:2.85rem}
+  .id-card{max-width:430px;margin-inline:auto}
+  .timeline{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:768px){
+  nav ul{display:none}
+  .hero{padding-top:8.5rem}
+  .numbers{grid-template-columns:1fr}
+  .timeline{grid-template-columns:repeat(2,1fr)}
+  .table-panel{overflow-x:auto}
+  table{min-width:620px}
+}
+@media(max-width:560px){
+  .nav-cta{padding:.55rem 1.05rem;font-size:.765rem}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .btn,.copy-btn{justify-content:center;width:100%}
+  .timeline{grid-template-columns:1fr}
+  .cards-strip{grid-template-columns:1fr}
+  .cards-strip div:first-child{border-right:none;border-bottom:1px solid var(--line)}
+  .footer-inner{flex-direction:column;text-align:center}
+  .modal-body{padding:1.55rem 1.25rem 1.35rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+  .track i{width:var(--w,0)}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= 导航 ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <div class="ball"></div>
+      <div>
+        <div class="name">宋宇轩</div>
+        <div class="num">No. 25-5-002</div>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#timeline">成长轨迹</a></li>
+        <li><a href="#hobbies">兴趣技能</a></li>
+        <li><a href="#numbers">数据面板</a></li>
+        <li><a href="#contact">联系我</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#contact" data-wechat>加个微信</a>
+  </div>
+</header>
+
+<!-- ================= Hero ================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy reveal">
+      <div class="eyebrow">Personal File <i>/</i> 个人档案 <i>·</i> 2025</div>
+
+      <h1>
+        <span class="cn">宋 宇 轩</span>
+        <em>Song Yuxuan</em>
+      </h1>
+
+      <p class="hero-line">把每一场对局，都打进自己的节奏。</p>
+      <p class="hero-sub">初二（5）班 · 程委中学 · 寄宿制一周一回</p>
+
+      <p class="hero-desc">
+        就读于程委中学，是一所一周回一次家的寄宿学校。擅长数学，业余时间沉迷台球与素描，也在跑步和历史里寻找自己的节奏。
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact" data-wechat>加个微信 <i>→</i></a>
+        <a class="btn btn-ghost" href="#billiards">看看我的球技</a>
+        <button class="copy-btn js-copy" type="button" data-copy="wxid_10vqb4bic2e422">
+          <span class="dot"></span>复制微信号
+        </button>
+      </div>
+    </div>
+
+    <!-- 档案卡 -->
+    <div class="file-card reveal">
+      <div class="top">
+        <div class="label">Student Profile</div>
+        <div class="lamp"></div>
+      </div>
+
+      <div class="portrait float">
+        <!-- 真实头像：命名为 portrait.jpg 放同目录即可替换 -->
+        <img src="portrait.jpg" alt="宋宇轩的照片" onerror="this.style.display='none'">
+        <div class="initial">SY</div>
+      </div>
+
+      <div class="id-row">
+        <div class="fname">宋宇轩</div>
+        <div class="fnum">/ 25-5-002</div>
+      </div>
+
+      <div class="data">
+        <div class="row"><div class="k">Class</div><div class="v">初二（5）班</div></div>
+        <div class="row"><div class="k">School</div><div class="v">程委中学 · 2025 – 至今</div></div>
+        <div class="row"><div class="k">Board</div><div class="v">寄宿制 · 一周回一次家</div></div>
+        <div class="row"><div class="k">Hobby</div><div class="v">台球 / 跑步 / 画画 / 历史 / 天文</div></div>
+        <div class="row"><div class="k">Expert</div><div class="v"><span class="tick"></span>数学</div></div>
+      </div>
+
+      <div class="cards-strip">
+        <div>
+          <div class="k">Favorite Subject</div>
+          <div class="v gold">数学</div>
+        </div>
+        <div>
+          <div class="k">Expert</div>
+          <div class="v">台球</div>
+        </div>
+      </div>
+
+      <div class="checker"></div>
+    </div>
+
+  </div>
+
+  <div class="scroll-hint">
+    <div class="bar"></div>
+    <div>Scroll</div>
+  </div>
+</section>
+
+<main>
+
+<!-- ================= 成长轨迹 ================= -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">01 — Timeline</div>
+      <h2>成长轨迹<em> · </em><span class="cn">从童年到初二的每一步</span></h2>
+    </div>
+
+    <div class="timeline stagger">
+      <article class="tl-item">
+        <span class="n">01</span>
+        <h4>童年启程</h4>
+        <span class="yr">2013</span>
+        <p>来到河北省，认识世界的第一站。</p>
+      </article>
+
+      <article class="tl-item">
+        <span class="n">02</span>
+        <h4>球桌启蒙</h4>
+        <span class="yr">2017</span>
+        <p>第一次拿起球杆，迷上台球碰撞的那声清脆。</p>
+      </article>
+
+      <article class="tl-item">
+        <span class="n">03</span>
+        <h4>小有成绩</h4>
+        <span class="yr">2018</span>
+        <p>取得市级第一名的好成绩。</p>
+      </article>
+
+      <article class="tl-item">
+        <span class="n">04</span>
+        <h4>寄宿起航</h4>
+        <span class="yr">2025</span>
+        <p>进入程委中学，开始一周回一次家的寄宿生活。</p>
+      </article>
+
+      <article class="tl-item">
+        <span class="n">05</span>
+        <h4>初二 25-5</h4>
+        <span class="yr">2025</span>
+        <p>成为初二（5）班的一员，专长数学，继续探索。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 兴趣与技能 ================= -->
+<section id="hobbies">
+  <div class="wrap">
+
+    <div class="sec-head reveal" id="billiards">
+      <div class="label">02 — Interests &amp; Skills</div>
+      <h2>兴趣与技能<em> · </em><span class="cn">球杆、脚步、笔触与方程式</span></h2>
+      <p>台球是我最擅长的一项运动；跑步、画画和历史，把生活填得刚刚好。</p>
+    </div>
+
+    <div class="skill-grid">
+
+      <!-- 台球杆插图 -->
+      <div class="cue-wrap reveal">
+        <div class="rings"></div>
+        <img src="cue-stick.png" alt="台球杆插画"
+             onerror="this.parentElement.innerHTML='<div style=\'font-family:var(--mono);font-size:.66rem;letter-spacing:.3em;color:var(--brass);border:1px dashed var(--brass-dim);border-radius:16px;padding:2.4rem 1.8rem;text-align:center;line-height:2.2\'>CUE STICK<br>cue-stick.png</div>'">
+        <div class="cue-tag">Billiards</div>
+      </div>
+
+      <div class="skills">
+
+        <div class="skill reveal">
+          <div class="row-title">
+            <div>
+              <span class="cn">台球</span>
+              <span class="en">Billiards</span>
+            </div>
+            <div class="pct">90%</div>
+          </div>
+          <div class="track"><i data-w="90%"></i></div>
+          <p>最擅长的一项运动，走位、力道、节奏都得自己拿捏。</p>
+        </div>
+
+        <div class="skill reveal">
+          <div class="row-title">
+            <div>
+              <span class="cn">数学</span>
+              <span class="en">Mathematics</span>
+            </div>
+            <div class="pct">88%</div>
+          </div>
+          <div class="track"><i data-w="88%"></i></div>
+          <p>最专长的学科，享受把复杂问题一步步推到答案的过程。</p>
+        </div>
+
+        <div class="skill reveal">
+          <div class="row-title">
+            <div>
+              <span class="cn">跑步</span>
+              <span class="en">Running</span>
+            </div>
+            <div class="pct">75%</div>
+          </div>
+          <div class="track"><i data-w="75%"></i></div>
+          <p>喜欢在操场上一圈一圈地跑，把节奏和呼吸跑成同一件事。</p>
+        </div>
+
+        <div class="skill reveal">
+          <div class="row-title">
+            <div>
+              <span class="cn">画画</span>
+              <span class="en">Drawing</span>
+            </div>
+            <div class="pct">80%</div>
+          </div>
+          <div class="track"><i data-w="80%"></i></div>
+          <p>以素描静物为主，画过陶罐、玻璃杯和水果。</p>
+        </div>
+
+        <div class="skill reveal">
+          <div class="row-title">
+            <div>
+              <span class="cn">历史</span>
+              <span class="en">History</span>
+            </div>
+            <div class="pct">70%</div>
+          </div>
+          <div class="track"><i data-w="70%"></i></div>
+          <p>读中国古代史，也在天文里寻找时间的另一种尺度。</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 数据面板 ================= -->
+<section id="numbers">
+  <div class="wrap">
+
+    <div class="sec-head center reveal">
+      <div class="label">03 — Dashboard</div>
+      <h2>把生活，调成数据<em>的样子</em></h2>
+      <p>把宋宇轩的个人信息、擅长科目和校园生活，做成了一个小小的"数据面板"。</p>
+    </div>
+
+    <div class="numbers stagger" style="margin-bottom:.85rem">
+      <div class="num-box">
+        <div class="big">2025</div>
+        <div class="lbl">Since</div>
+        <div class="cn">入学 · 程委中学</div>
+      </div>
+      <div class="num-box">
+        <div class="big">5</div>
+        <div class="lbl">Hobbies</div>
+        <div class="cn">台球 跑步 画画 历史 天文</div>
+      </div>
+      <div class="num-box">
+        <div class="big">1</div>
+        <div class="lbl">Major</div>
+        <div class="cn">数学</div>
+      </div>
+    </div>
+
+    <div class="table-panel reveal">
+      <div class="panel-head">
+        <div class="t">Profile Overview / 个人档案总览</div>
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="note">Updated · 2025</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>项目 / Item</th>
+            <th>内容 / Value</th>
+            <th>详情 / Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>姓名<span class="sub">Name</span></td>
+            <td class="val">宋宇轩</td>
+            <td>Song Yuxuan</td>
+          </tr>
+          <tr>
+            <td>年级<span class="sub">Grade</span></td>
+            <td class="val">初二</td>
+            <td>
+              <span class="rank gold">25-5</span>班
+            </td>
+          </tr>
+          <tr>
+            <td>学校<span class="sub">School</span></td>
+            <td class="val">2025 – 至今</td>
+            <td class="subject">程委中学</td>
+          </tr>
+          <tr>
+            <td>住宿<span class="sub">Boarding</span></td>
+            <td class="val">每周回一次家</td>
+            <td class="subject">寄宿制 · 一周一回</td>
+          </tr>
+          <tr>
+            <td>特长<span class="sub">Expert In</span></td>
+            <td class="val">学科</td>
+            <td><span class="rank gold">01</span>数学</td>
+          </tr>
+          <tr>
+            <td>兴趣<span class="sub">Hobbies</span></td>
+            <td class="val">5 项</td>
+            <td>
+              <div class="bars">
+                <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>
+                <i></i><i></i><i></i>
+              </div>
+              <span style="opacity:.6;font-size:.82rem">台球 / 跑步 / 画画 / 历史 / 天文</span>
+            </td>
+          </tr>
+          <tr>
+            <td>状态<span class="sub">Status</span></td>
+            <td class="val">2025</td>
+            <td>
+              <span class="pill now">在读</span>
+              <span class="pill" style="margin-left:.42rem">Open To Chat</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= 微信联系 ================= -->
+<section id="wechat">
+  <div class="wrap wechat">
+
+    <div class="id-card reveal">
+      <div class="avatar">
+        <img src="portrait.jpg" alt="宋宇轩的微信头像" onerror="this.style.display='none'">
+        <div class="initial">SY</div>
+      </div>
+      <div class="id-name">宋宇轩</div>
+      <div class="id-wx">WeChat · wxid_10vqb4bic2e422</div>
+      <button class="copy-btn js-copy" type="button" data-copy="wxid_10vqb4bic2e422">
+        <span class="dot"></span>复制微信号
+      </button>
+      <p class="id-tip">复制微信号，在微信「添加朋友」里搜索即可。</p>
+    </div>
+
+    <div class="wechat-text reveal">
+      <div class="label" style="font-family:var(--mono);font-size:.625rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass);margin-bottom:1.05rem;display:flex;align-items:center;gap:.85rem">
+        <span style="width:38px;height:1px;background:var(--brass-dim)"></span>04 — WeChat
+      </div>
+
+      <h3>加个微信<em>，</em><br>顺便聊聊台球</h3>
+
+      <p>我在寄宿学校，一周回一次家。想联系我，搜下面这串微信号就行。聊数学题、约球、或者分享一幅画，都欢迎。</p>
+
+      <ul class="wechat-list">
+        <li>微信号：<strong style="font-family:var(--mono);color:var(--brass);letter-spacing:.08em">wxid_10vqb4bic2e422</strong></li>
+        <li>回消息的时间：周末在家的时候</li>
+        <li>打招呼暗号：「你好，我是从个人档案点进来的」</li>
+      </ul>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" type="button" data-wechat>点这个加微信 <i>→</i></button>
+        <button class="copy-btn js-copy" type="button" data-copy="wxid_10vqb4bic2e422">
+          <span class="dot"></span>复制微信号
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ================= 结语 ================= -->
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <div class="big">很高兴<em>认识你</em></div>
+    <div class="sub">Nice To Meet You</div>
+
+    <div class="contact-actions">
+      <button class="btn btn-primary" type="button" data-wechat>点这个加微信 <i>→</i></button>
+      <button class="copy-btn js-copy" type="button" data-copy="wxid_10vqb4bic2e422">
+        <span class="dot"></span>复制微信号
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>
+      Last Updated 2025 · Designed by 宋宇轩<br>
+      Song Yuxuan · Class 25-5 · 程委中学
+    </p>
+    <div class="brand-mini">
+      <div class="ball"></div>
+      <div>25-5-002</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= 微信弹窗 ================= -->
+<div class="modal-overlay" id="wxModal" role="dialog" aria-modal="true" aria-label="微信联系">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="t">WeChat / 微信联系</div>
+      <button class="modal-close" type="button" data-close aria-label="关闭">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-avatar">
+        <img src="portrait.jpg" alt="宋宇轩的微信头像" onerror="this.style.display='none'">
+        <div class="initial">SY</div>
+      </div>
+
+      <h3>宋宇轩</h3>
+      <div class="sub">Song Yuxuan · 初二 25-5 班</div>
+
+      <div class="wx-id-inline">
+        <div class="lab">WeChat ID / 微信号</div>
+        <div class="val">wxid_10vqb4bic2e422</div>
+      </div>
+
+      <button class="copy-btn js-copy" type="button" data-copy="wxid_10vqb4bic2e422">复制微信号</button>
+
+      <p class="modal-tip">复制微信号，到微信「添加朋友」里搜索即可。</p>
+    </div>
+
+    <div class="checker-sm"></div>
+  </div>
+</div>
+
+<script>
+/* ---------- 导航滚动状态 ---------- */
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+onScroll();
+window.addEventListener('scroll', onScroll, {passive:true});
+
+/* ---------- 进场动画 ---------- */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+},{threshold:.16, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal, .stagger').forEach(el=>io.observe(el));
+
+/* ---------- 能力条动画 ---------- */
+const barIO = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const bar = e.target;
+      requestAnimationFrame(()=>{ bar.style.width = bar.dataset.w; });
+      barIO.unobserve(bar);
+    }
+  });
+},{threshold:.5});
+document.querySelectorAll('.track i').forEach(el=>barIO.observe(el));
+
+/* ---------- 复制文本 ---------- */
+async function copyText(text, btn){
+  const old = btn.textContent;
+  const done = ()=>{
+    btn.textContent = '已复制 ✓';
+    btn.style.background = '#E0B265';
+    btn.style.color = '#0D1210';
+    btn.style.borderColor = '#E0B265';
+    setTimeout(()=>{
+      btn.textContent = old;
+      btn.style.background = 'transparent';
+      btn.style.color = '#E0B265';
+      btn.style.borderColor = '';
+    }, 1800);
+  };
+  try{
+    await navigator.clipboard.writeText(text);
+    done();
+  }catch(err){
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand('copy'); done(); }
+    catch(e){ btn.textContent = '请长按选中复制'; }
+    document.body.removeChild(ta);
+  }
+}
+document.querySelectorAll('.js-copy').forEach(btn=>{
+  btn.addEventListener('click', ()=> copyText(btn.dataset.copy || '', btn));
+});
+
+/* ---------- 微信弹窗 ---------- */
+const overlay = document.getElementById('wxModal');
+const openModal  = ()=>{ overlay.classList.add('open'); document.body.style.overflow = 'hidden'; };
+const closeModal = ()=>{ overlay.classList.remove('open'); document.body.style.overflow = ''; };
+
+document.querySelectorAll('[data-wechat]').forEach(btn=>{
+  btn.addEventListener('click', e=>{ e.preventDefault(); openModal(); });
+});
+document.querySelectorAll('[data-close]').forEach(btn=>btn.addEventListener('click', closeModal));
+overlay.addEventListener('click', e=>{ if(e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e=>{ if(e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>
